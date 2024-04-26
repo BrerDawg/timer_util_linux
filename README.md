@@ -26,7 +26,7 @@ Run app from where you built it, it also needs write permissions to same folder 
 
 Hover over some control to see hints. Enter times using keypad buttons, not keyboard. The minute increment buttons can be right clicked to decrement Time Interval.
 
-_**Add** an ampersand at end of a bash command to make cmd run in the background, else you won't be able to make this utility come back to the foreground till bash command completes._
+_**Add an ampersand** at end of a bash command to make cmd run in the background, else you won't be able to make this utility come back to the foreground till bash command completes._
 
 
 
