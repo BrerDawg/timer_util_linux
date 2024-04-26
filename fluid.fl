@@ -1,0 +1,362 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cxx}
+decl {\#include "globals.h"} {public global
+}
+
+decl {\#include "button_mouse_click.h"} {public global
+}
+
+decl {fluid_wnd *wnd_fluid;} {public local
+}
+
+Function {make_fluid_window()} {open
+} {
+  Fl_Window {} {
+    label { ~~oO=====   timer_util_linux   =====Oo~~} open
+    xywh {1014 492 600 295} type Double
+    class fluid_wnd visible
+  } {
+    Fl_Button bt_button0 {
+      label bt_button0
+      xywh {290 230 115 20}
+    }
+    Fl_Input fi_remaining_tim0 {
+      label remaining_tim0
+      xywh {115 20 75 20} labelsize 9 align 1 textsize 11
+    }
+    Fl_Button bt_start0 {
+      label start0
+      xywh {200 20 40 20} labelsize 9
+    }
+    Fl_Input fi_cmd0 {
+      label cmd0
+      xywh {395 1 155 34} labelsize 12 textsize 11
+    }
+    Fl_Button bt_test0 {
+      label test0
+      xywh {555 1 40 20} labelsize 9
+    }
+    Fl_Button bt_num0 {
+      label num0
+      xywh {31 270 20 20} labelsize 9
+    }
+    Fl_Button bt_num7 {
+      label num7
+      xywh {31 210 20 20} labelsize 9
+    }
+    Fl_Button bt_num8 {
+      label num8
+      xywh {51 210 20 20} labelsize 9
+    }
+    Fl_Button bt_num9 {
+      label num9
+      xywh {71 210 20 20} labelsize 9
+    }
+    Fl_Button bt_num4 {
+      label num4
+      xywh {31 230 20 20} labelsize 9
+    }
+    Fl_Button bt_num5 {
+      label num5
+      xywh {51 230 20 20} labelsize 9
+    }
+    Fl_Button bt_num6 {
+      label num6
+      xywh {71 230 20 20} labelsize 9
+    }
+    Fl_Button bt_num1 {
+      label num1
+      xywh {31 250 20 20} labelsize 9
+    }
+    Fl_Button bt_num2 {
+      label num2
+      xywh {51 250 20 20} labelsize 9
+    }
+    Fl_Button bt_num3 {
+      label num3
+      xywh {71 250 20 20} labelsize 9
+    }
+    Fl_Button bt_clr {
+      label clear
+      xywh {51 270 40 20} labelsize 9
+    }
+    Fl_Button bt_reset0 {
+      label reset0
+      xywh {245 20 40 20} labelsize 9
+    }
+    Fl_Input fi_interval_tim0 {
+      label interval_tim0
+      xywh {30 20 75 20} labelsize 9 align 1 textsize 11
+    }
+    Fl_Check_Button ck_cycle0 {
+      label cycle0
+      xywh {290 5 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Check_Button ck_beep0 {
+      label beep0
+      xywh {290 20 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Check_Button ck_wintop0 {
+      label wintop0
+      xywh {290 35 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Round_Button bt_sel0 {
+      label sel0
+      xywh {5 17 20 25} down_box ROUND_DOWN_BOX
+    }
+    Fl_Round_Button bt_sel1 {
+      label sel1
+      xywh {5 95 20 25} down_box ROUND_DOWN_BOX
+    }
+    Fl_Round_Button bt_sel2 {
+      label sel2
+      xywh {5 170 20 25} down_box ROUND_DOWN_BOX
+    }
+    Fl_Input fi_beeps0 {
+      label beeps0
+      xywh {395 35 30 18} labelsize 12 textsize 11
+    }
+    Fl_Input fi_pitch0 {
+      label pitch0
+      xywh {470 35 55 18} labelsize 12 textsize 11
+    }
+    Fl_Button bt_load {
+      label load
+      xywh {505 270 40 20} labelsize 9
+    }
+    Fl_Button bt_save {
+      label save
+      xywh {555 270 40 20} labelsize 9
+    }
+    Fl_Button bt_dur15 {
+      label dur15
+      xywh {100 250 45 20} labelsize 9
+      class button_mouse_click
+    }
+    Fl_Button bt_dur30 {
+      label dur30
+      xywh {100 230 45 20} labelsize 9
+      class button_mouse_click
+    }
+    Fl_Button bt_dur5 {
+      label dur5
+      xywh {100 270 45 20} labelsize 9
+      class button_mouse_click
+    }
+    Fl_Button bt_dur1 {
+      label dur1
+      xywh {145 270 45 20} labelsize 9
+      class button_mouse_click
+    }
+    Fl_Button bt_dur45 {
+      label dur45
+      xywh {146 210 45 20} labelsize 9
+      class button_mouse_click
+    }
+    Fl_Button bt_dur60 {
+      label dur60
+      tooltip {right click to subtract} xywh {100 210 45 20} labelsize 9
+      class button_mouse_click
+    }
+    Fl_Button bt_dur10 {
+      label dur10
+      xywh {145 250 45 20} labelsize 9
+      class button_mouse_click
+    }
+    Fl_Check_Button ck_cmd_on0 {
+      label cmd_on0
+      xywh {290 49 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Button bt_dur20 {
+      label dur20
+      xywh {146 230 45 20} labelsize 9
+      class button_mouse_click
+    }
+    Fl_Input fi_remaining_tim1 {
+      label remaining_tim1
+      xywh {115 96 75 20} labelsize 9 align 1 textsize 11
+    }
+    Fl_Button bt_start1 {
+      label start1
+      xywh {200 96 40 20} labelsize 9
+    }
+    Fl_Input fi_cmd1 {
+      label cmd1
+      xywh {395 77 155 34} labelsize 12 textsize 11
+    }
+    Fl_Button bt_test1 {
+      label test1
+      xywh {555 77 40 20} labelsize 9
+    }
+    Fl_Button bt_reset1 {
+      label reset1
+      xywh {245 96 40 20} labelsize 9
+    }
+    Fl_Input fi_interval_tim1 {
+      label interval_tim1
+      xywh {30 96 75 20} labelsize 9 align 1 textsize 11
+    }
+    Fl_Check_Button ck_cycle1 {
+      label cycle1
+      xywh {290 81 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Check_Button ck_beep1 {
+      label beep1
+      xywh {290 96 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Check_Button ck_wintop1 {
+      label wintop1
+      xywh {290 111 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Input fi_beeps1 {
+      label beeps1
+      xywh {395 111 30 18} labelsize 12 textsize 11
+    }
+    Fl_Input fi_pitch1 {
+      label pitch1
+      xywh {470 111 55 18} labelsize 12 textsize 11
+    }
+    Fl_Check_Button ck_cmd_on1 {
+      label cmd_on1
+      xywh {290 125 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Input fi_remaining_tim2 {
+      label remaining_tim2
+      xywh {115 171 75 20} labelsize 9 align 1 textsize 11
+    }
+    Fl_Button bt_start2 {
+      label start2
+      xywh {200 171 40 20} labelsize 9
+    }
+    Fl_Input fi_cmd2 {
+      label cmd2
+      xywh {395 152 155 34} labelsize 12 textsize 11
+    }
+    Fl_Button bt_test2 {
+      label test2
+      xywh {555 152 40 20} labelsize 9
+    }
+    Fl_Button bt_reset2 {
+      label reset2
+      xywh {245 171 40 20} labelsize 9
+    }
+    Fl_Input fi_interval_tim2 {
+      label interval_tim2
+      xywh {30 171 75 20} labelsize 9 align 1 textsize 11
+    }
+    Fl_Check_Button ck_cycle2 {
+      label cycle2
+      xywh {290 156 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Check_Button ck_beep2 {
+      label beep2
+      xywh {290 171 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Check_Button ck_wintop2 {
+      label wintop2
+      xywh {290 186 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Input fi_beeps2 {
+      label beeps2
+      xywh {395 186 30 18} labelsize 12 textsize 11
+    }
+    Fl_Input fi_pitch2 {
+      label pitch2 selected
+      xywh {470 186 55 18} labelsize 12 textsize 11
+    }
+    Fl_Check_Button ck_cmd_on2 {
+      label cmd_on2
+      xywh {290 200 15 15} down_box DOWN_BOX labelsize 9
+    }
+    Fl_Input fi_time_now {
+      label time_now
+      xywh {315 270 75 20} labelsize 9 align 1 textsize 11
+    }
+    Fl_Box bx_interval_eta0 {
+      label interval_eta0
+      tooltip {real time that time out will occur at} xywh {30 40 75 20} labelsize 10
+    }
+    Fl_Box bx_eta0 {
+      label eta0
+      tooltip {real time that time out will occur at} xywh {115 40 75 20} labelsize 10
+    }
+    Fl_Box bx_interval_eta1 {
+      label interval_eta1
+      tooltip {real time that time out will occur at} xywh {30 115 75 20} labelsize 10
+    }
+    Fl_Box bx_eta1 {
+      label eta1
+      tooltip {real time that time out will occur at} xywh {115 115 75 20} labelsize 10
+    }
+    Fl_Box bx_interval_eta2 {
+      label interval_eta2
+      tooltip {real time that time out will occur at} xywh {30 190 75 20} labelsize 10
+    }
+    Fl_Box bx_eta2 {
+      label eta2
+      tooltip {real time that time out will occur at} xywh {115 190 75 20} labelsize 10
+    }
+    Fl_Box bx_ctrl_minus {
+      label ctrl_minus
+      tooltip {real time that time out will occur at} xywh {195 270 80 20} labelsize 10
+    }
+    Fl_Button bt_minus {
+      label minus
+      xywh {278 270 25 20} labelsize 9
+    }
+    Fl_Button bt_about {
+      label about
+      xywh {430 270 40 20} labelsize 9
+    }
+    Fl_Button bt_trim_01 {
+      label {-01}
+      xywh {225 45 15 15} labelsize 8
+    }
+    Fl_Button bt_trim01 {
+      label 01
+      xywh {245 45 15 15} labelsize 8
+    }
+    Fl_Button bt_trim05 {
+      label 05
+      xywh {265 45 15 15} labelsize 8
+    }
+    Fl_Button bt_trim_05 {
+      label {-05}
+      xywh {205 45 15 15} labelsize 8
+    }
+    Fl_Button bt_trim_11 {
+      label {-11}
+      xywh {225 120 15 15} labelsize 8
+    }
+    Fl_Button bt_trim11 {
+      label 11
+      xywh {245 120 15 15} labelsize 8
+    }
+    Fl_Button bt_trim15 {
+      label 15
+      xywh {265 120 15 15} labelsize 8
+    }
+    Fl_Button bt_trim_15 {
+      label {-15}
+      xywh {205 120 15 15} labelsize 8
+    }
+    Fl_Button bt_trim_21 {
+      label {-21}
+      xywh {225 195 15 15} labelsize 8
+    }
+    Fl_Button bt_trim21 {
+      label 21
+      xywh {245 195 15 15} labelsize 8
+    }
+    Fl_Button bt_trim25 {
+      label 25
+      xywh {265 195 15 15} labelsize 8
+    }
+    Fl_Button bt_trim_25 {
+      label {-25}
+      xywh {205 195 15 15} labelsize 8
+    }
+  }
+}
