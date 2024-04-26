@@ -24,7 +24,10 @@ Build this app by typing 'make', no installation is required.
 ### Usage
 Run app from where you built it, it also needs write permissions to same folder to save 'timer_util_linux.ini' on exit.
 
-Hover over some control to see hints. Enter times using keypad buttons, not keyboard. Add an ampersand at end of a bash command to make cmd run in the background, else you won't be able to make this utility come back to the foreground till bash command completes.
+Hover over some control to see hints. Enter times using keypad buttons, not keyboard. The minute increment buttons can be right clicked to decrement Time Interval.
+
+_Add an ampersand at end of a bash command to make cmd run in the background, else you won't be able to make this utility come back to the foreground till bash command completes._
+
 
 
 ### Code and Shortcomings
@@ -35,11 +38,5 @@ Fltk's fluid gui designer was used for layout of main window controls, fluid gen
 
 
 ![timer_util_linux](zztimer_util_linux.jpg)
-
-
-
-
-
-
 
 
