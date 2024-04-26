@@ -11,7 +11,7 @@ To count time.
 
 
 ### Dependency
-Requires: FLTK library, a lean but functional gui library for linking, fltk-1.3.4-2 or better should work.
+Requires: FLTK library, a lean but functional gui library, fltk-1.3.4-2 or better should work.
 
 
 ### Build
