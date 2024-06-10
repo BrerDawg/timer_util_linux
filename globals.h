@@ -75,7 +75,7 @@
 using namespace std;
 
 #define cnsAppName "timer_util_linux"
-#define cnsAppWndName " ~~oO=====   timer_util_linux   =====Oo~~"		//changing this?, then ALSO change fluid's wnd label
+#define cnsAppWndName "~~oO  timer_util_linux  Oo~~"		//changing this?, then ALSO change fluid's wnd label
 
 #define cns_build_date build_date       //this holds the build date e.g: 2016 Mar 23, obtained automatically by a shell cmd and sets '-Dbuild_date' option in Makefile, you could manually use e.g: -Dbuild_date="\"2016 Mar 23\""
 

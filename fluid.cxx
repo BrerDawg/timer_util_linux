@@ -171,7 +171,7 @@ Fl_Button *bt_trim_25=(Fl_Button *)0;
 
 fluid_wnd* make_fluid_window() {
   fluid_wnd* w;
-  { fluid_wnd* o = new fluid_wnd(0, 0, 600, 295, " ~~oO=====   timer_util_linux   =====Oo~~");
+  { fluid_wnd* o = new fluid_wnd(0, 0, 600, 295, "~~oO  timer_util_linux  Oo~~");
     w = o; if (w) {/* empty */}
     o->box(FL_FLAT_BOX);
     o->color(FL_BACKGROUND_COLOR);

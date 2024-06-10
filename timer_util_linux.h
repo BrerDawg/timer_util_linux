@@ -19,7 +19,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 
 //timer_util_linux.h
-//v1.06		
+//v1.07		
 
 #define _FILE_OFFSET_BITS 64			//large file handling, must be before all #include...
 //#define _LARGE_FILES

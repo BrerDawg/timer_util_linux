@@ -14,7 +14,7 @@ decl {fluid_wnd *wnd_fluid;} {public local
 Function {make_fluid_window()} {open
 } {
   Fl_Window {} {
-    label { ~~oO=====   timer_util_linux   =====Oo~~} open
+    label {~~oO  timer_util_linux  Oo~~} open selected
     xywh {1014 492 600 295} type Double
     class fluid_wnd visible
   } {
@@ -263,7 +263,7 @@ Function {make_fluid_window()} {open
       xywh {395 186 30 18} labelsize 12 textsize 11
     }
     Fl_Input fi_pitch2 {
-      label pitch2 selected
+      label pitch2
       xywh {470 186 55 18} labelsize 12 textsize 11
     }
     Fl_Check_Button ck_cmd_on2 {

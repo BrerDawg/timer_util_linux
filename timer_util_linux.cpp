@@ -27,7 +27,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //v1.04		29-jun-2021			//added toggle button 'bt_minus'
 //v1.05		29-jun-2021			//fixed start button clearing current count down time, see cb_bt_start()
 //v1.06		26-apr-2024			//added right button click subtract feature, see class 'button_mouse_click', added trim feature for 'remaining time', see 'cb_bt_trim()'
-
+//v1.07		09-jun-2024			//added 'do_beep_by_idx()' for 'cb_bt_test()' to use
 
 #include "timer_util_linux.h"
 
@@ -1145,14 +1145,93 @@ vtime[ii].time = vtime[ii].interval_time;
 
 
 
+
+
+
+bool do_beep_by_idx( unsigned int idx )
+{
+string s1;
+
+if( idx >= vtime.size() ) return 0;
+
+if( idx == 0 )
+	{
+	s1 = fi_beeps0->value();
+	int beeps;
+	sscanf( s1.c_str(), "%d", &beeps );
+	
+	if( beeps < 0 ) beeps = 0;
+	if( beeps > 60 ) beeps = 60;
+
+
+	s1 = fi_pitch0->value();
+	int pitch;
+	sscanf( s1.c_str(), "%d", &pitch );
+	
+	if( pitch < 100 ) pitch = 100;
+	if( pitch > 11000 ) pitch = 11000;
+
+	if( vtime[idx].options & eo_beep ) do_beep( pitch, cn_beep_delay, beeps );
+	}
+
+
+if( idx == 1 )
+	{
+	s1 = fi_beeps1->value();
+	int beeps;
+	sscanf( s1.c_str(), "%d", &beeps );
+	
+	if( beeps < 0 ) beeps = 0;
+	if( beeps > 60 ) beeps = 60;
+
+
+	s1 = fi_pitch1->value();
+	int pitch;
+	sscanf( s1.c_str(), "%d", &pitch );
+	
+	if( pitch < 100 ) pitch = 100;
+	if( pitch > 11000 ) pitch = 11000;
+
+	if( vtime[idx].options & eo_beep ) do_beep( pitch, cn_beep_delay, beeps );
+	}
+
+
+if( idx == 2 )
+	{
+	s1 = fi_beeps2->value();
+	int beeps;
+	sscanf( s1.c_str(), "%d", &beeps );
+	
+	if( beeps < 0 ) beeps = 0;
+	if( beeps > 60 ) beeps = 60;
+
+
+	s1 = fi_pitch2->value();
+	int pitch;
+	sscanf( s1.c_str(), "%d", &pitch );
+	
+	if( pitch < 100 ) pitch = 100;
+	if( pitch > 11000 ) pitch = 11000;
+
+	if( vtime[idx].options & eo_beep ) do_beep( pitch, cn_beep_delay, beeps );
+	}
+
+return 1;
+}
+
+
+
+
+
+
 void cb_bt_test(Fl_Widget *w, void *v)
 {
 int ii = (intptr_t)v;
 Fl_Input* wdg = (Fl_Input* )w;
 
-if( ii == 0 ) RunShell( fi_cmd0->value() );
-if( ii == 1 ) RunShell( fi_cmd1->value() );
-if( ii == 2 ) RunShell( fi_cmd2->value() );
+if( ii == 0 ) { RunShell( fi_cmd0->value() );  do_beep_by_idx( 0 ); }	//v1.07
+if( ii == 1 ) { RunShell( fi_cmd1->value() );  do_beep_by_idx( 1 ); }	//v1.07
+if( ii == 2 ) { RunShell( fi_cmd2->value() );  do_beep_by_idx( 2 ); }	//v1.07
 
 }
 
