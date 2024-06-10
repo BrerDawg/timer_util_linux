@@ -3353,7 +3353,7 @@ Fl_Input *teText = new Fl_Input(10,10,wnd->w()-20,wnd->h()-20,"");
 teText->type(FL_MULTILINE_OUTPUT);
 teText->textsize(12);
 
-strpf( s1, "%s,  %s,  Built: %s\n", cnsAppWndName, "v1.06", cns_build_date );
+strpf( s1, "%s,  %s,  Built: %s\n", cnsAppWndName, "v1.07", cns_build_date );
 st += s1;
 
 
