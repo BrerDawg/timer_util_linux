@@ -1,4 +1,4 @@
-Apr 2024 v1.06
+Sep 2024 v1.08
 
 
 
@@ -31,7 +31,7 @@ _**Add an ampersand** at end of a bash command to make cmd run in the background
 
 
 ### Code and Shortcomings
-Some of the code is re-purposed from other projects I've tinkered with over the years, so excuse the prehistoric c style, evolving conventions and inefficiencies.
+Some of the code is re-purposed from other projects I've tinkered with over the years, so excuse the antiquated c style, evolving conventions and inefficiencies.
 
 Fltk's fluid gui designer was used for layout of main window controls, fluid generated 'fluid.h' and 'fluid.cxx'.
 

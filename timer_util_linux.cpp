@@ -28,6 +28,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //v1.05		29-jun-2021			//fixed start button clearing current count down time, see cb_bt_start()
 //v1.06		26-apr-2024			//added right button click subtract feature, see class 'button_mouse_click', added trim feature for 'remaining time', see 'cb_bt_trim()'
 //v1.07		09-jun-2024			//added 'do_beep_by_idx()' for 'cb_bt_test()' to use
+//v1.08		26-sep-2024			//added 15 sec trim buttons and further group sel enables
 
 #include "timer_util_linux.h"
 
@@ -96,6 +97,7 @@ bool my_file_chooser( string &picked, const char* title, const char* pat, const 
 void cb_btAbout(Fl_Widget *, void *);
 void cb_btQuit(Fl_Widget *, void *);
 void cb_timer1(void *);
+void cb_bt_sel(Fl_Widget *w, void *v);
 
 
 
@@ -1104,6 +1106,12 @@ string s1;
 
 int ii = (intptr_t)v;
 
+if( ii == 0 ) cb_bt_sel( 0, 0 );										//group sel
+if( ii == 1 ) cb_bt_sel( 0, (void*)1 );
+if( ii == 2 ) cb_bt_sel( 0, (void*)2 );
+
+
+
 int secs = get_secs( ii, 0 );											//v1.05
 int mins = get_mins( ii, 0 );											//v1.05
 int hrs = get_hrs( ii, 0 );												//v1.05
@@ -1137,6 +1145,10 @@ vtime[ii].state = !vtime[ii].state;
 void cb_bt_reset(Fl_Widget *w, void *v)
 {
 int ii = (intptr_t)v;
+
+if( ii == 0 ) cb_bt_sel( 0, 0 );										//group sel
+if( ii == 1 ) cb_bt_sel( 0, (void*)1 );
+if( ii == 2 ) cb_bt_sel( 0, (void*)2 );
 
 vtime[ii].time = vtime[ii].interval_time;
 
@@ -1229,11 +1241,17 @@ void cb_bt_test(Fl_Widget *w, void *v)
 int ii = (intptr_t)v;
 Fl_Input* wdg = (Fl_Input* )w;
 
+if( ii == 0 ) cb_bt_sel( 0, 0 );										//group sel
+if( ii == 1 ) cb_bt_sel( 0, (void*)1 );
+if( ii == 2 ) cb_bt_sel( 0, (void*)2 );
+
 if( ii == 0 ) { RunShell( fi_cmd0->value() );  do_beep_by_idx( 0 ); }	//v1.07
 if( ii == 1 ) { RunShell( fi_cmd1->value() );  do_beep_by_idx( 1 ); }	//v1.07
 if( ii == 2 ) { RunShell( fi_cmd2->value() );  do_beep_by_idx( 2 ); }	//v1.07
 
 }
+
+
 
 
 
@@ -1274,6 +1292,10 @@ void cb_bt_cycle(Fl_Widget *w, void *v)
 {
 int ii = (intptr_t)v;
 
+if( ii == 0 ) cb_bt_sel( 0, 0 );										//group sel
+if( ii == 1 ) cb_bt_sel( 0, (void*)1 );
+if( ii == 2 ) cb_bt_sel( 0, (void*)2 );
+
 Fl_Check_Button* wdg = (Fl_Check_Button* )w;
 
 st_time_tag o = vtime[ii];
@@ -1297,6 +1319,10 @@ void cb_ck_beep(Fl_Widget *w, void *v)
 {
 int ii = (intptr_t)v;
 
+if( ii == 0 ) cb_bt_sel( 0, 0 );										//group sel
+if( ii == 1 ) cb_bt_sel( 0, (void*)1 );
+if( ii == 2 ) cb_bt_sel( 0, (void*)2 );
+
 Fl_Check_Button* wdg = (Fl_Check_Button* )w;
 
 st_time_tag o = vtime[ii];
@@ -1313,6 +1339,11 @@ vtime[ii] = o;
 void cb_bt_wintop(Fl_Widget *w, void *v)
 {
 int ii = (intptr_t)v;
+
+if( ii == 0 ) cb_bt_sel( 0, 0 );										//group sel
+if( ii == 1 ) cb_bt_sel( 0, (void*)1 );
+if( ii == 2 ) cb_bt_sel( 0, (void*)2 );
+
 
 Fl_Check_Button* wdg = (Fl_Check_Button* )w;
 
@@ -1331,6 +1362,10 @@ vtime[ii] = o;
 void cb_cmd_on0(Fl_Widget *w, void *v)
 {
 int ii = (intptr_t)v;
+
+if( ii == 0 ) cb_bt_sel( 0, 0 );										//group sel
+if( ii == 1 ) cb_bt_sel( 0, (void*)1 );
+if( ii == 2 ) cb_bt_sel( 0, (void*)2 );
 
 Fl_Check_Button* wdg = (Fl_Check_Button* )w;
 
@@ -1418,6 +1453,8 @@ void cb_bt_trim(Fl_Widget *w, void *v)
 {
 int ii = (intptr_t)v;
 
+if( w == bt_trim_00 ) cb_bt_sel( 0, 0 );
+if( w == bt_trim00 ) cb_bt_sel( 0, 0 );
 
 if( w == bt_trim_01 ) cb_bt_sel( 0, 0 );
 if( w == bt_trim01 ) cb_bt_sel( 0, 0 );
@@ -1425,11 +1462,21 @@ if( w == bt_trim01 ) cb_bt_sel( 0, 0 );
 if( w == bt_trim_05 ) cb_bt_sel( 0, 0 );
 if( w == bt_trim05 ) cb_bt_sel( 0, 0 );
 
+
+
+if( w == bt_trim_10 ) cb_bt_sel( 0, (void*)1 );
+if( w == bt_trim10 ) cb_bt_sel( 0, (void*)1 );
+
 if( w == bt_trim_11 ) cb_bt_sel( 0, (void*)1 );
 if( w == bt_trim11 ) cb_bt_sel( 0, (void*)1 );
 
 if( w == bt_trim_15 ) cb_bt_sel( 0, (void*)1 );
 if( w == bt_trim15 ) cb_bt_sel( 0, (void*)1 );
+
+
+
+if( w == bt_trim_20 ) cb_bt_sel( 0, (void*)2 );
+if( w == bt_trim20 ) cb_bt_sel( 0, (void*)2 );
 
 if( w == bt_trim_21 ) cb_bt_sel( 0, (void*)2 );
 if( w == bt_trim21 ) cb_bt_sel( 0, (void*)2 );
@@ -1443,7 +1490,12 @@ int dir = 1;
 
 if( ii < 0 ) dir = -1;
 
-for( int i = 0; i < fabsf(ii*60); i++ )
+float trim_factor = ii;
+
+if( trim_factor == 15 ) trim_factor = 0.25;
+if( trim_factor == -15 ) trim_factor = -0.25;
+
+for( int i = 0; i < fabsf( trim_factor * 60 ); i++ )
 	{
 	add_to_time( idx, 0, dir );											//this call can only handle max of +/-59 secs, so repeatedly call it with 1 or -1
 	}
@@ -2111,6 +2163,23 @@ bt_about->align( FL_ALIGN_INSIDE );			//FL_ALIGN_LEFT
 bt_about->callback( cb_bt_combo, (void*)0 );
 
 
+fluidfl_find_dimensions( vfluidfl, "-00", find_idx, ox, oy, ow, oh );		//see 'extract_fluidfl_dimensions()'
+bt_trim_00 = new button_mouse_click(ox, oy, ow, oh, "-0");
+bt_trim_00->labelsize( 11 );	
+bt_trim_00->align( FL_ALIGN_INSIDE );			//FL_ALIGN_LEFT
+bt_trim_00->callback( cb_bt_trim, (void*)-15 );
+bt_trim_00->tooltip( sz_tooltip1 );
+
+
+fluidfl_find_dimensions( vfluidfl, "00", find_idx, ox, oy, ow, oh );		//see 'extract_fluidfl_dimensions()'
+bt_trim00 = new button_mouse_click(ox, oy, ow, oh, "+0");
+bt_trim00->labelsize( 11 );	
+bt_trim00->align( FL_ALIGN_INSIDE );			//FL_ALIGN_LEFT
+bt_trim00->callback( cb_bt_trim, (void*)15 );
+bt_trim00->tooltip( sz_tooltip1 );
+
+
+
 fluidfl_find_dimensions( vfluidfl, "-01", find_idx, ox, oy, ow, oh );		//see 'extract_fluidfl_dimensions()'
 bt_trim_01 = new button_mouse_click(ox, oy, ow, oh, "-1");
 bt_trim_01->labelsize( 11 );	
@@ -2147,6 +2216,23 @@ bt_trim05->tooltip( sz_tooltip1 );
 
 
 
+fluidfl_find_dimensions( vfluidfl, "-10", find_idx, ox, oy, ow, oh );		//see 'extract_fluidfl_dimensions()'
+bt_trim_10 = new button_mouse_click(ox, oy, ow, oh, "-0");
+bt_trim_10->labelsize( 11 );	
+bt_trim_10->align( FL_ALIGN_INSIDE );			//FL_ALIGN_LEFT
+bt_trim_10->callback( cb_bt_trim, (void*)-15 );
+bt_trim_10->tooltip( sz_tooltip1 );
+
+
+fluidfl_find_dimensions( vfluidfl, "10", find_idx, ox, oy, ow, oh );		//see 'extract_fluidfl_dimensions()'
+bt_trim10 = new button_mouse_click(ox, oy, ow, oh, "+0");
+bt_trim10->labelsize( 11 );	
+bt_trim10->align( FL_ALIGN_INSIDE );			//FL_ALIGN_LEFT
+bt_trim10->callback( cb_bt_trim, (void*)15 );
+bt_trim10->tooltip( sz_tooltip1 );
+
+
+
 fluidfl_find_dimensions( vfluidfl, "-11", find_idx, ox, oy, ow, oh );		//see 'extract_fluidfl_dimensions()'
 bt_trim_11 = new button_mouse_click(ox, oy, ow, oh, "-1");
 bt_trim_11->labelsize( 11 );	
@@ -2180,6 +2266,23 @@ bt_trim15->callback( cb_bt_trim, (void*)5 );
 bt_trim15->tooltip( sz_tooltip1 );
 
 
+
+
+
+fluidfl_find_dimensions( vfluidfl, "-20", find_idx, ox, oy, ow, oh );		//see 'extract_fluidfl_dimensions()'
+bt_trim_20 = new button_mouse_click(ox, oy, ow, oh, "-0");
+bt_trim_20->labelsize( 11 );	
+bt_trim_20->align( FL_ALIGN_INSIDE );			//FL_ALIGN_LEFT
+bt_trim_20->callback( cb_bt_trim, (void*)-15 );
+bt_trim_20->tooltip( sz_tooltip1 );
+
+
+fluidfl_find_dimensions( vfluidfl, "20", find_idx, ox, oy, ow, oh );		//see 'extract_fluidfl_dimensions()'
+bt_trim20 = new button_mouse_click(ox, oy, ow, oh, "+0");
+bt_trim20->labelsize( 11 );	
+bt_trim20->align( FL_ALIGN_INSIDE );			//FL_ALIGN_LEFT
+bt_trim20->callback( cb_bt_trim, (void*)15 );
+bt_trim20->tooltip( sz_tooltip1 );
 
 
 
@@ -3353,7 +3456,7 @@ Fl_Input *teText = new Fl_Input(10,10,wnd->w()-20,wnd->h()-20,"");
 teText->type(FL_MULTILINE_OUTPUT);
 teText->textsize(12);
 
-strpf( s1, "%s,  %s,  Built: %s\n", cnsAppWndName, "v1.07", cns_build_date );
+strpf( s1, "%s,  %s,  Built: %s\n", cnsAppWndName, "v1.08", cns_build_date );
 st += s1;
 
 

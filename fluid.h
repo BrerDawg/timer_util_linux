@@ -94,5 +94,11 @@ extern Fl_Button *bt_trim_21;
 extern Fl_Button *bt_trim21;
 extern Fl_Button *bt_trim25;
 extern Fl_Button *bt_trim_25;
+extern Fl_Button *bt_trim_00;
+extern Fl_Button *bt_trim00;
+extern Fl_Button *bt_trim_10;
+extern Fl_Button *bt_trim10;
+extern Fl_Button *bt_trim_20;
+extern Fl_Button *bt_trim20;
 fluid_wnd* make_fluid_window();
 #endif

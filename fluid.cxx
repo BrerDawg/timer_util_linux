@@ -169,6 +169,18 @@ Fl_Button *bt_trim25=(Fl_Button *)0;
 
 Fl_Button *bt_trim_25=(Fl_Button *)0;
 
+Fl_Button *bt_trim_00=(Fl_Button *)0;
+
+Fl_Button *bt_trim00=(Fl_Button *)0;
+
+Fl_Button *bt_trim_10=(Fl_Button *)0;
+
+Fl_Button *bt_trim10=(Fl_Button *)0;
+
+Fl_Button *bt_trim_20=(Fl_Button *)0;
+
+Fl_Button *bt_trim20=(Fl_Button *)0;
+
 fluid_wnd* make_fluid_window() {
   fluid_wnd* w;
   { fluid_wnd* o = new fluid_wnd(0, 0, 600, 295, "~~oO  timer_util_linux  Oo~~");
@@ -178,7 +190,7 @@ fluid_wnd* make_fluid_window() {
     o->selection_color(FL_BACKGROUND_COLOR);
     o->labeltype(FL_NO_LABEL);
     o->labelfont(0);
-    o->labelsize(14);
+    o->labelsize(10);
     o->labelcolor(FL_FOREGROUND_COLOR);
     o->align(Fl_Align(FL_ALIGN_TOP));
     o->when(FL_WHEN_RELEASE);
@@ -193,7 +205,7 @@ fluid_wnd* make_fluid_window() {
       bt_start0->labelsize(9);
     } // Fl_Button* bt_start0
     { fi_cmd0 = new Fl_Input(395, 1, 155, 34, "cmd0");
-      fi_cmd0->labelsize(12);
+      fi_cmd0->labelsize(10);
       fi_cmd0->textsize(11);
     } // Fl_Input* fi_cmd0
     { bt_test0 = new Fl_Button(555, 1, 40, 20, "test0");
@@ -240,15 +252,15 @@ fluid_wnd* make_fluid_window() {
       fi_interval_tim0->textsize(11);
       fi_interval_tim0->align(Fl_Align(FL_ALIGN_TOP));
     } // Fl_Input* fi_interval_tim0
-    { ck_cycle0 = new Fl_Check_Button(290, 5, 15, 15, "cycle0");
+    { ck_cycle0 = new Fl_Check_Button(299, 5, 15, 15, "cycle0");
       ck_cycle0->down_box(FL_DOWN_BOX);
       ck_cycle0->labelsize(9);
     } // Fl_Check_Button* ck_cycle0
-    { ck_beep0 = new Fl_Check_Button(290, 20, 15, 15, "beep0");
+    { ck_beep0 = new Fl_Check_Button(299, 20, 15, 15, "beep0");
       ck_beep0->down_box(FL_DOWN_BOX);
       ck_beep0->labelsize(9);
     } // Fl_Check_Button* ck_beep0
-    { ck_wintop0 = new Fl_Check_Button(290, 35, 15, 15, "wintop0");
+    { ck_wintop0 = new Fl_Check_Button(299, 35, 15, 15, "wintop0");
       ck_wintop0->down_box(FL_DOWN_BOX);
       ck_wintop0->labelsize(9);
     } // Fl_Check_Button* ck_wintop0
@@ -262,11 +274,11 @@ fluid_wnd* make_fluid_window() {
       bt_sel2->down_box(FL_ROUND_DOWN_BOX);
     } // Fl_Round_Button* bt_sel2
     { fi_beeps0 = new Fl_Input(395, 35, 30, 18, "beeps0");
-      fi_beeps0->labelsize(12);
+      fi_beeps0->labelsize(10);
       fi_beeps0->textsize(11);
     } // Fl_Input* fi_beeps0
     { fi_pitch0 = new Fl_Input(470, 35, 55, 18, "pitch0");
-      fi_pitch0->labelsize(12);
+      fi_pitch0->labelsize(10);
       fi_pitch0->textsize(11);
     } // Fl_Input* fi_pitch0
     { bt_load = new Fl_Button(505, 270, 40, 20, "load");
@@ -353,7 +365,7 @@ fluid_wnd* make_fluid_window() {
       bt_dur10->align(Fl_Align(FL_ALIGN_CENTER));
       bt_dur10->when(FL_WHEN_RELEASE);
     } // button_mouse_click* bt_dur10
-    { ck_cmd_on0 = new Fl_Check_Button(290, 49, 15, 15, "cmd_on0");
+    { ck_cmd_on0 = new Fl_Check_Button(299, 49, 15, 15, "cmd_on0");
       ck_cmd_on0->down_box(FL_DOWN_BOX);
       ck_cmd_on0->labelsize(9);
     } // Fl_Check_Button* ck_cmd_on0
@@ -391,27 +403,27 @@ fluid_wnd* make_fluid_window() {
       fi_interval_tim1->textsize(11);
       fi_interval_tim1->align(Fl_Align(FL_ALIGN_TOP));
     } // Fl_Input* fi_interval_tim1
-    { ck_cycle1 = new Fl_Check_Button(290, 81, 15, 15, "cycle1");
+    { ck_cycle1 = new Fl_Check_Button(299, 81, 15, 15, "cycle1");
       ck_cycle1->down_box(FL_DOWN_BOX);
       ck_cycle1->labelsize(9);
     } // Fl_Check_Button* ck_cycle1
-    { ck_beep1 = new Fl_Check_Button(290, 96, 15, 15, "beep1");
+    { ck_beep1 = new Fl_Check_Button(299, 96, 15, 15, "beep1");
       ck_beep1->down_box(FL_DOWN_BOX);
       ck_beep1->labelsize(9);
     } // Fl_Check_Button* ck_beep1
-    { ck_wintop1 = new Fl_Check_Button(290, 111, 15, 15, "wintop1");
+    { ck_wintop1 = new Fl_Check_Button(299, 111, 15, 15, "wintop1");
       ck_wintop1->down_box(FL_DOWN_BOX);
       ck_wintop1->labelsize(9);
     } // Fl_Check_Button* ck_wintop1
     { fi_beeps1 = new Fl_Input(395, 111, 30, 18, "beeps1");
-      fi_beeps1->labelsize(12);
+      fi_beeps1->labelsize(10);
       fi_beeps1->textsize(11);
     } // Fl_Input* fi_beeps1
     { fi_pitch1 = new Fl_Input(470, 111, 55, 18, "pitch1");
-      fi_pitch1->labelsize(12);
+      fi_pitch1->labelsize(10);
       fi_pitch1->textsize(11);
     } // Fl_Input* fi_pitch1
-    { ck_cmd_on1 = new Fl_Check_Button(290, 125, 15, 15, "cmd_on1");
+    { ck_cmd_on1 = new Fl_Check_Button(299, 125, 15, 15, "cmd_on1");
       ck_cmd_on1->down_box(FL_DOWN_BOX);
       ck_cmd_on1->labelsize(9);
     } // Fl_Check_Button* ck_cmd_on1
@@ -424,7 +436,7 @@ fluid_wnd* make_fluid_window() {
       bt_start2->labelsize(9);
     } // Fl_Button* bt_start2
     { fi_cmd2 = new Fl_Input(395, 152, 155, 34, "cmd2");
-      fi_cmd2->labelsize(12);
+      fi_cmd2->labelsize(10);
       fi_cmd2->textsize(11);
     } // Fl_Input* fi_cmd2
     { bt_test2 = new Fl_Button(555, 152, 40, 20, "test2");
@@ -438,27 +450,27 @@ fluid_wnd* make_fluid_window() {
       fi_interval_tim2->textsize(11);
       fi_interval_tim2->align(Fl_Align(FL_ALIGN_TOP));
     } // Fl_Input* fi_interval_tim2
-    { ck_cycle2 = new Fl_Check_Button(290, 156, 15, 15, "cycle2");
+    { ck_cycle2 = new Fl_Check_Button(299, 156, 15, 15, "cycle2");
       ck_cycle2->down_box(FL_DOWN_BOX);
       ck_cycle2->labelsize(9);
     } // Fl_Check_Button* ck_cycle2
-    { ck_beep2 = new Fl_Check_Button(290, 171, 15, 15, "beep2");
+    { ck_beep2 = new Fl_Check_Button(299, 171, 15, 15, "beep2");
       ck_beep2->down_box(FL_DOWN_BOX);
       ck_beep2->labelsize(9);
     } // Fl_Check_Button* ck_beep2
-    { ck_wintop2 = new Fl_Check_Button(290, 186, 15, 15, "wintop2");
+    { ck_wintop2 = new Fl_Check_Button(299, 186, 15, 15, "wintop2");
       ck_wintop2->down_box(FL_DOWN_BOX);
       ck_wintop2->labelsize(9);
     } // Fl_Check_Button* ck_wintop2
     { fi_beeps2 = new Fl_Input(395, 186, 30, 18, "beeps2");
-      fi_beeps2->labelsize(12);
+      fi_beeps2->labelsize(10);
       fi_beeps2->textsize(11);
     } // Fl_Input* fi_beeps2
     { fi_pitch2 = new Fl_Input(470, 186, 55, 18, "pitch2");
-      fi_pitch2->labelsize(12);
+      fi_pitch2->labelsize(10);
       fi_pitch2->textsize(11);
     } // Fl_Input* fi_pitch2
-    { ck_cmd_on2 = new Fl_Check_Button(290, 200, 15, 15, "cmd_on2");
+    { ck_cmd_on2 = new Fl_Check_Button(299, 200, 15, 15, "cmd_on2");
       ck_cmd_on2->down_box(FL_DOWN_BOX);
       ck_cmd_on2->labelsize(9);
     } // Fl_Check_Button* ck_cmd_on2
@@ -501,42 +513,66 @@ fluid_wnd* make_fluid_window() {
     { bt_about = new Fl_Button(430, 270, 40, 20, "about");
       bt_about->labelsize(9);
     } // Fl_Button* bt_about
-    { bt_trim_01 = new Fl_Button(225, 45, 15, 15, "-01");
+    { bt_trim_01 = new Fl_Button(208, 45, 15, 15, "-01");
       bt_trim_01->labelsize(8);
     } // Fl_Button* bt_trim_01
-    { bt_trim01 = new Fl_Button(245, 45, 15, 15, "01");
+    { bt_trim01 = new Fl_Button(262, 45, 15, 15, "01");
       bt_trim01->labelsize(8);
     } // Fl_Button* bt_trim01
-    { bt_trim05 = new Fl_Button(265, 45, 15, 15, "05");
+    { bt_trim05 = new Fl_Button(279, 45, 15, 15, "05");
       bt_trim05->labelsize(8);
     } // Fl_Button* bt_trim05
-    { bt_trim_05 = new Fl_Button(205, 45, 15, 15, "-05");
+    { bt_trim_05 = new Fl_Button(191, 45, 15, 15, "-05");
       bt_trim_05->labelsize(8);
     } // Fl_Button* bt_trim_05
-    { bt_trim_11 = new Fl_Button(225, 120, 15, 15, "-11");
+    { bt_trim_11 = new Fl_Button(208, 120, 15, 15, "-11");
       bt_trim_11->labelsize(8);
     } // Fl_Button* bt_trim_11
-    { bt_trim11 = new Fl_Button(245, 120, 15, 15, "11");
+    { bt_trim11 = new Fl_Button(262, 120, 15, 15, "11");
       bt_trim11->labelsize(8);
     } // Fl_Button* bt_trim11
-    { bt_trim15 = new Fl_Button(265, 120, 15, 15, "15");
+    { bt_trim15 = new Fl_Button(279, 120, 15, 15, "15");
       bt_trim15->labelsize(8);
     } // Fl_Button* bt_trim15
-    { bt_trim_15 = new Fl_Button(205, 120, 15, 15, "-15");
+    { bt_trim_15 = new Fl_Button(191, 120, 15, 15, "-15");
       bt_trim_15->labelsize(8);
     } // Fl_Button* bt_trim_15
-    { bt_trim_21 = new Fl_Button(225, 195, 15, 15, "-21");
+    { bt_trim_21 = new Fl_Button(208, 195, 15, 15, "-21");
       bt_trim_21->labelsize(8);
     } // Fl_Button* bt_trim_21
-    { bt_trim21 = new Fl_Button(245, 195, 15, 15, "21");
+    { bt_trim21 = new Fl_Button(262, 195, 15, 15, "21");
       bt_trim21->labelsize(8);
     } // Fl_Button* bt_trim21
-    { bt_trim25 = new Fl_Button(265, 195, 15, 15, "25");
+    { bt_trim25 = new Fl_Button(279, 195, 15, 15, "25");
       bt_trim25->labelsize(8);
     } // Fl_Button* bt_trim25
-    { bt_trim_25 = new Fl_Button(205, 195, 15, 15, "-25");
+    { bt_trim_25 = new Fl_Button(191, 195, 15, 15, "-25");
       bt_trim_25->labelsize(8);
     } // Fl_Button* bt_trim_25
+    { bt_trim_00 = new Fl_Button(225, 45, 15, 15, "-00");
+      bt_trim_00->tooltip("15 sec adj");
+      bt_trim_00->labelsize(8);
+    } // Fl_Button* bt_trim_00
+    { bt_trim00 = new Fl_Button(245, 45, 15, 15, "00");
+      bt_trim00->tooltip("15 sec adj");
+      bt_trim00->labelsize(8);
+    } // Fl_Button* bt_trim00
+    { bt_trim_10 = new Fl_Button(225, 120, 15, 15, "-10");
+      bt_trim_10->tooltip("15 sec adj");
+      bt_trim_10->labelsize(8);
+    } // Fl_Button* bt_trim_10
+    { bt_trim10 = new Fl_Button(245, 120, 15, 15, "10");
+      bt_trim10->tooltip("15 sec adj");
+      bt_trim10->labelsize(8);
+    } // Fl_Button* bt_trim10
+    { bt_trim_20 = new Fl_Button(225, 195, 15, 15, "-20");
+      bt_trim_20->tooltip("15 sec adj");
+      bt_trim_20->labelsize(8);
+    } // Fl_Button* bt_trim_20
+    { bt_trim20 = new Fl_Button(245, 195, 15, 15, "20");
+      bt_trim20->tooltip("15 sec adj");
+      bt_trim20->labelsize(8);
+    } // Fl_Button* bt_trim20
     o->end();
   } // fluid_wnd* o
   return w;
